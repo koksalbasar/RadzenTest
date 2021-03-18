@@ -1,0 +1,84 @@
+﻿@page "/"
+@page "/sample-page"
+@layout MainLayout
+@inherits RadzenTest.Pages.SamplePageComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using RadzenTest.Models.SqlExpress
+<RadzenContent Container="main">
+  <ChildContent>
+    <RadzenHeading Size="H1" Text="SamplePage">
+    </RadzenHeading>
+    <div class="row">
+      <div class="col-md-3">
+        <RadzenLabel Text="DatePicker">
+        </RadzenLabel>
+      </div>
+      <div class="col-md-3">
+        <RadzenDatePicker Name="Datepicker0" TValue="dynamic">
+        </RadzenDatePicker>
+      </div>
+      <div class="col-md-3">
+        <RadzenLabel Text="DatePicker /w time">
+        </RadzenLabel>
+      </div>
+      <div class="col-md-3">
+        <RadzenDatePicker ShowTime="true" Name="Datepicker1" TValue="dynamic">
+        </RadzenDatePicker>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <RadzenLabel Text="DropDown 1">
+        </RadzenLabel>
+      </div>
+      <div class="col-md-3">
+        <RadzenDropDown Data="@getProductsResult" TextProperty="ProductName" ValueProperty="Id" Name="Dropdown0" TValue="dynamic">
+        </RadzenDropDown>
+      </div>
+      <div class="col-md-3">
+        <RadzenLabel Text="DropDown Grid 1">
+        </RadzenLabel>
+      </div>
+      <div class="col-md-3">
+        <RadzenDropDownDataGrid Data="@getProductsResult" TextProperty="ProductName" ValueProperty="Id" Name="DropdownDatagrid0" TValue="dynamic">
+          <Columns>
+            <RadzenDropDownDataGridColumn Property="Id" Title="Id">
+            </RadzenDropDownDataGridColumn>
+            <RadzenDropDownDataGridColumn Property="ProductName" Title="Product Name">
+            </RadzenDropDownDataGridColumn>
+            <RadzenDropDownDataGridColumn Property="ProductPrice" Title="Product Price">
+            </RadzenDropDownDataGridColumn>
+          </Columns>
+        </RadzenDropDownDataGrid>
+      </div>
+    </div>
+    <div style="bottom: 100px; position: fixed; width: 70%" class="row">
+      <div class="col-md-3">
+        <RadzenLabel Text="DropDown 2">
+        </RadzenLabel>
+      </div>
+      <div class="col-md-3">
+        <RadzenDropDown Data="@getProductsResult" TextProperty="ProductName" ValueProperty="Id" Name="Dropdown1" TValue="dynamic">
+        </RadzenDropDown>
+      </div>
+      <div class="col-md-3">
+        <RadzenLabel Text="DropDown Grid 2">
+        </RadzenLabel>
+      </div>
+      <div class="col-md-3">
+        <RadzenDropDownDataGrid Data="@getProductsResult" TextProperty="ProductName" ValueProperty="Id" Name="DropdownDatagrid1" TValue="dynamic">
+          <Columns>
+            <RadzenDropDownDataGridColumn Property="Id" Title="Id">
+            </RadzenDropDownDataGridColumn>
+            <RadzenDropDownDataGridColumn Property="ProductName" Title="Product Name">
+            </RadzenDropDownDataGridColumn>
+            <RadzenDropDownDataGridColumn Property="ProductPrice" Title="Product Price">
+            </RadzenDropDownDataGridColumn>
+          </Columns>
+        </RadzenDropDownDataGrid>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

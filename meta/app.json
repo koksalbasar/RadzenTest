@@ -1,0 +1,24 @@
+{
+  "dataSources": [
+    "SqlExpress"
+  ],
+  "generator": "@radzen/blazor-server",
+  "https": false,
+  "layouts": [
+    "Login",
+    "Main"
+  ],
+  "logo": "",
+  "name": "RadzenTest",
+  "navigation": [
+    "SamplePage"
+  ],
+  "pages": [
+    "SamplePage"
+  ],
+  "serverLang": "cs",
+  "serverProject": true,
+  "serverVersion": "3",
+  "startPage": null,
+  "theme": "default"
+}

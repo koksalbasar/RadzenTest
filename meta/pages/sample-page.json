@@ -1,0 +1,248 @@
+{
+  "access": "Everybody",
+  "components": [
+    {
+      "components": [
+        {
+          "name": "pageTitle",
+          "size": "H1",
+          "text": "SamplePage",
+          "type": "heading"
+        },
+        {
+          "components": [
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "name": "label0",
+                  "text": "DatePicker",
+                  "type": "label"
+                }
+              ],
+              "name": "col0",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "events": {
+                    "change": [],
+                    "dateRender": []
+                  },
+                  "name": "datepicker0",
+                  "placeholder": "",
+                  "type": "datepicker",
+                  "value": ""
+                }
+              ],
+              "name": "col3",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "name": "label1",
+                  "text": "DatePicker /w time",
+                  "type": "label"
+                }
+              ],
+              "name": "col2",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "name": "datepicker1",
+                  "showTime": true,
+                  "type": "datepicker"
+                }
+              ],
+              "name": "col1",
+              "type": "col"
+            }
+          ],
+          "name": "row0",
+          "type": "row"
+        },
+        {
+          "components": [
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "name": "label2",
+                  "text": "DropDown 1",
+                  "type": "label"
+                }
+              ],
+              "name": "col4",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "data": "${getProductsResult}",
+                  "name": "dropdown0",
+                  "textProperty": "ProductName",
+                  "type": "dropdown",
+                  "valueProperty": "Id"
+                }
+              ],
+              "name": "col5",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "name": "label3",
+                  "text": "DropDown Grid 1",
+                  "type": "label"
+                }
+              ],
+              "name": "col6",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "columns": [
+                    {
+                      "property": "Id",
+                      "title": "Id"
+                    },
+                    {
+                      "property": "ProductName",
+                      "title": "Product Name"
+                    },
+                    {
+                      "property": "ProductPrice",
+                      "title": "Product Price"
+                    }
+                  ],
+                  "data": "${getProductsResult}",
+                  "itemType": "RadzenTest.Models.SqlExpress.Product",
+                  "name": "dropdownDatagrid0",
+                  "textProperty": "ProductName",
+                  "type": "dropdown-datagrid",
+                  "value": "",
+                  "valueProperty": "Id"
+                }
+              ],
+              "name": "col7",
+              "type": "col"
+            }
+          ],
+          "name": "row1",
+          "type": "row"
+        },
+        {
+          "components": [
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "name": "label4",
+                  "text": "DropDown 2",
+                  "type": "label"
+                }
+              ],
+              "name": "col8",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "data": "${getProductsResult}",
+                  "name": "dropdown1",
+                  "textProperty": "ProductName",
+                  "type": "dropdown",
+                  "valueProperty": "Id"
+                }
+              ],
+              "name": "col9",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "name": "label5",
+                  "text": "DropDown Grid 2",
+                  "type": "label"
+                }
+              ],
+              "name": "col10",
+              "type": "col"
+            },
+            {
+              "class": "col-md-3",
+              "components": [
+                {
+                  "columns": [
+                    {
+                      "property": "Id",
+                      "title": "Id"
+                    },
+                    {
+                      "property": "ProductName",
+                      "title": "Product Name"
+                    },
+                    {
+                      "property": "ProductPrice",
+                      "title": "Product Price"
+                    }
+                  ],
+                  "data": "${getProductsResult}",
+                  "itemType": "RadzenTest.Models.SqlExpress.Product",
+                  "name": "dropdownDatagrid1",
+                  "textProperty": "ProductName",
+                  "type": "dropdown-datagrid",
+                  "value": "",
+                  "valueProperty": "Id"
+                }
+              ],
+              "name": "col11",
+              "type": "col"
+            }
+          ],
+          "name": "row2",
+          "style": {
+            "bottom": "100px",
+            "position": "fixed",
+            "width": "70%"
+          },
+          "type": "row"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "name": "SqlExpress.getProducts",
+        "parameters": [],
+        "then": [
+          {
+            "name": "getProductsResult",
+            "type": "set",
+            "value": "${result}",
+            "valueType": "IEnumerable<RadzenTest.Models.SqlExpress.Product>"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Main",
+  "name": "SamplePage"
+}
